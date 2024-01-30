@@ -90,6 +90,68 @@ makepkg -si
 
 Check, could be needed [libpipewire](https://archlinux.org/packages/extra/x86_64/libwireplumber/)
 
+
+### Shell
+|**Package**|**Where**|
+|-----------|---------|
+|[zsh](https://archlinux.org/packages/?name=zsh)|pacman|
+|[nerd-fonts](https://archlinux.org/groups/x86_64/nerd-fonts/)|pacman|
+
+For the installation procedure, see [here](https://wiki.archlinux.org/title/zsh) and [here to change the defaul shell](https://wiki.archlinux.org/title/Command-line_shell#Changing_your_default_shell).
+
+TL;DR: install zsh through the package manager.
+Type
+```
+$ zsh
+```
+and proceed with the installation. Keep default values for history, and default for
+completion systems.
+
+List available shells with
+```
+$ chsh -l
+```
+Notice that `/usr/bin/zsh` should be present.
+
+Change the default shell to zsh through:
+```
+$ chsh -s /usr/bin/zsh
+```
+
+Then we can istall [oh my zsh](https://github.com/ohmyzsh/ohmyzsh) (source [here](https://wiki.archlinux.org/title/zsh)).
+
+TL;DR:
+```
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Then you can configure [powerlevel10k](https://github.com/romkatv/powerlevel10k).
+
+TL;DR:
+```
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+and then set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`. Type from your home:
+```
+$ source .zshrc
+```
+and follow the installation.
+
+**Plugins**
+[zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+
+TL;DR:
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+and add the plugin inside the list of oh my zsh plugins in `~/.zshrc`:
+```
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+```
+
 ### Utilities
 |**Package**|**Where**|**Description**|
 |-----------|---------|----------|
@@ -98,4 +160,12 @@ Check, could be needed [libpipewire](https://archlinux.org/packages/extra/x86_64
 |[gedit](https://archlinux.org/packages/?name=gedit)|pacman|Text editor|
 |[telegram-desktop](https://archlinux.org/packages/?name=telegram-desktop)|pacman|Messaging|
 |[nemo](https://archlinux.org/packages/?name=nemo)|pacman|File explorer|
+|[nemo-fileroller](https://archlinux.org/packages/extra/x86_64/nemo-fileroller/)|pacman|Utility to compress and uncompress files with right click|
 |[visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin)|AUR|Code IDE|
+
+### Create link
+Create the dynamic links to this folder files. To do so, in this cloned repo:
+```
+Landotfiles$ chmod.x create-link.sh
+Landotfiles$ ./create-link.sh
+```
