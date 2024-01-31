@@ -96,6 +96,7 @@ Check, could be needed [libpipewire](https://archlinux.org/packages/extra/x86_64
 |-----------|---------|
 |[zsh](https://archlinux.org/packages/?name=zsh)|pacman|
 |[nerd-fonts](https://archlinux.org/groups/x86_64/nerd-fonts/)|pacman|
+|[zsh-syntax-highlighting](https://archlinux.org/packages/extra/any/zsh-syntax-highlighting/)|pacman|
 
 For the installation procedure, see [here](https://wiki.archlinux.org/title/zsh) and [here to change the defaul shell](https://wiki.archlinux.org/title/Command-line_shell#Changing_your_default_shell).
 
@@ -137,6 +138,9 @@ $ source .zshrc
 ```
 and follow the installation.
 
+If, as me, you print stuff when you open the terminal, you may want to set `typeset -g POWERLEVEL9K_INSTANT_PROMPT=` to `quiet` in `~/.p10k.zsh`
+
+When you install zsh-syntax-highlighting, remember to pur `source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh` at the end of `~/.zshrc`
 **Plugins**
 [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
@@ -152,15 +156,38 @@ plugins=(
 )
 ```
 
+[catpuccin syntax highlighting](https://github.com/catppuccin/zsh-syntax-highlighting)
+
+TL;DR: requires [zsh-syntax-highlighting](https://archlinux.org/packages/extra/any/zsh-syntax-highlighting/), then
+```
+git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
+cd zsh-syntax-highlighting/themes/
+mkdir ~/.zsh/
+cp -v catppuccin_mocha-zsh-syntax-highlighting.zsh ~/.zsh/
+```
+If you want to do as me, clone the repo in the `~/github-repos` folder, then instead of the `cp`, just do:
+```
+ln -s ~/github-repos/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+```
+and add to `~/.zshrc`:
+```
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+# now load zsh-syntax-highlighting plugin
+```
+
 ### Utilities
 |**Package**|**Where**|**Description**|
 |-----------|---------|----------|
 |[alacritty](https://archlinux.org/packages/?name=alacritty)|pacman|Terminal|
+|[btop](https://archlinux.org/packages/extra/x86_64/btop/)|pacman|Usage of CPU|
 |[firefox](https://archlinux.org/packages/?name=firefox)|pacman|Browser|
 |[gedit](https://archlinux.org/packages/?name=gedit)|pacman|Text editor|
 |[telegram-desktop](https://archlinux.org/packages/?name=telegram-desktop)|pacman|Messaging|
 |[nemo](https://archlinux.org/packages/?name=nemo)|pacman|File explorer|
 |[nemo-fileroller](https://archlinux.org/packages/extra/x86_64/nemo-fileroller/)|pacman|Utility to compress and uncompress files with right click|
+|[neofetch](https://archlinux.org/packages/extra/any/neofetch/)|pacman|Display purposes|
+|[nvtop](https://archlinux.org/packages/extra/x86_64/nvtop/)|pacman|Usage and processes GPU|
 |[visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin)|AUR|Code IDE|
 
 ### Create link
