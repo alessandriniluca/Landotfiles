@@ -268,6 +268,7 @@ Landotfiles $ ./create-link.sh
 - [ ] volume on screen popup
 - [ ] pyprland
 - [ ] fix time
+- [ ] add login interface
 -----------------------
 - [ ] make installation script
 - [ ] do the same for the laptop
