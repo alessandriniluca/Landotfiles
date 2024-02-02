@@ -141,7 +141,9 @@ and follow the installation.
 If, as me, you print stuff when you open the terminal, you may want to set `typeset -g POWERLEVEL9K_INSTANT_PROMPT=` to `quiet` in `~/.p10k.zsh`
 
 When you install zsh-syntax-highlighting, remember to pur `source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh` at the end of `~/.zshrc`
+
 **Plugins**
+
 [zsh-autosuggestion](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
 TL;DR:
@@ -190,9 +192,87 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 |[nvtop](https://archlinux.org/packages/extra/x86_64/nvtop/)|pacman|Usage and processes GPU|
 |[visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin)|AUR|Code IDE|
 
+### Dual boot Windows (sad landomix)
+|**Package**|**Where**|
+|-----------|---------|
+|[ntfs-3g](https://archlinux.org/packages/?name=ntfs-3g)|pacman|
+|[os-prober](https://archlinux.org/packages/?name=os-prober)|pacman|
+
+This package is needed to mount windows' partition in order to add it to [GRUB](https://wiki.archlinux.org/title/GRUB)'s menu.
+
+TL;DR:
+
+In order to detect other file systems, edit / uncomment
+```
+GRUB_DISABLE_OS_PROBER=false
+```
+in
+```
+/etc/default/grub
+```
+N.B.: remember **sudo** when editing `/etc/default/grub`.
+
+Then, follow the guide to generate `grub.cfg`
+
+TL;DR:
+
+Mount the partition from which the other system boots, and then run
+```
+# grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+### Hyprland stuff
+|**Package**|**Where**|**Purpose**|
+|-----------|---------|-----------|
+|[wofi](https://archlinux.org/packages/extra/x86_64/wofi/)|pacman|Applications launcher|
+|[waybar](https://archlinux.org/packages/extra/x86_64/waybar/)|pacman|Top screen status bar|
+|[cava](https://aur.archlinux.org/packages/cava)|AUR|Fancy audio visualizer|
+|[python-requests](https://archlinux.org/packages/extra/any/python-requests/)|pacman|Needed for weather in waybar|
+
+
 ### Create link
 Create the dynamic links to this folder files. To do so, in this cloned repo:
+```wofi
+Landotfiles $ chmod.x create-link.sh
+Landotfiles $ ./create-link.sh
 ```
-Landotfiles$ chmod.x create-link.sh
-Landotfiles$ ./create-link.sh
-```
+
+## What's Next?
+- [ ] Complete waybar subpackages (if you want to check, run waybar from terminal, and while is open see what fails)
+- [ ] wallpaper
+- [ ] Startup things little bit delayed (e.g., nextcloud)
+- [ ] bindings in hypr.conf (source different files)
+- [ ] screenshot
+- [ ] screen sharing
+- [ ] fix waybar & cava
+- [ ] Authentication agent
+- [ ] swaylock
+- [ ] swaync
+- [ ] Screen recording
+- [ ] double keyboard layout
+- [ ] Whatsie
+- [ ] pdfarranger
+- [ ] obs
+- [ ] onlyoffice (old version that works on hyprland, remember to tell pacman not upgrade it)
+- [ ] discord
+- [ ] spicetify & spotify
+- [ ] wireguard
+- [ ] Bitwarden
+- [ ] Nextcloud
+- [ ] Teams
+- [ ] Fix icons weather
+- [ ] Fix themes of applications
+- [ ] Better GRUB
+- [ ] Dashboards, plus control volumes from Gl00ria's dotfiles
+- [ ] Remap GMMK Pro rotatory encoder
+- [ ] volume on screen popup
+- [ ] pyprland
+- [ ] fix time
+-----------------------
+- [ ] make installation script
+- [ ] do the same for the laptop
+
+## Credits
+- https://github.com/Gl00ria/dotfiles
+- https://github.com/juriSacchetta/.dotfiles
+- https://github.com/Fili-ai/Dotfiles
