@@ -240,7 +240,10 @@ Mount the partition from which the other system boots, and then run
 ### Optionals
 |**Package**|**Where**|**Purpose**|
 |[bitwarden](https://archlinux.org/packages/extra/x86_64/bitwarden/)|pacman|Password manager|
+|[discord](https://archlinux.org/packages/?name=discord)|pacman|Discord|
+|[obs-studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)|pacman|OBS|
 |[pdfarranger](https://archlinux.org/packages/extra/any/pdfarranger/)|pacman|Arrange and merge PDFs|
+|[teams-for-linux](https://aur.archlinux.org/packages/teams-for-linux)|AUR|Microsoft Teams|
 |[upscayl-bin](https://aur.archlinux.org/packages/upscayl-bin)|AUR|Image Upscaler|
 
 ### Create link
@@ -265,14 +268,14 @@ Landotfiles $ ./create-link.sh
 - [ ] double keyboard layout
 - [x] Whatsie
 - [x] pdfarranger
-- [ ] obs
+- [x] obs
 - [ ] onlyoffice (old version that works on hyprland, remember to tell pacman not upgrade it)
-- [ ] discord
+- [x] discord
 - [ ] spicetify & spotify
 - [ ] wireguard
 - [x] Bitwarden
 - [ ] Nextcloud
-- [ ] Teams
+- [x] Teams
 - [ ] Fix icons weather
 - [ ] Fix themes of applications
 - [ ] Better GRUB
