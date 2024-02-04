@@ -239,6 +239,7 @@ Mount the partition from which the other system boots, and then run
 
 ### Optionals
 |**Package**|**Where**|**Purpose**|
+|-----------|---------|-----------|
 |[bitwarden](https://archlinux.org/packages/extra/x86_64/bitwarden/)|pacman|Password manager|
 |[discord](https://archlinux.org/packages/?name=discord)|pacman|Discord|
 |[obs-studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)|pacman|OBS|
