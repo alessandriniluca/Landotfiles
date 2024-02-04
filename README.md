@@ -190,7 +190,9 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 |[nemo-fileroller](https://archlinux.org/packages/extra/x86_64/nemo-fileroller/)|pacman|Utility to compress and uncompress files with right click|
 |[neofetch](https://archlinux.org/packages/extra/any/neofetch/)|pacman|Display purposes|
 |[nvtop](https://archlinux.org/packages/extra/x86_64/nvtop/)|pacman|Usage and processes GPU|
+|[topgrade](https://aur.archlinux.org/packages/topgrade)|AUR|Update and upgrade everything with one command|
 |[visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin)|AUR|Code IDE|
+|[whatsie](https://aur.archlinux.org/packages/whatsie)|AUR|Whatsapp client|
 
 ### Dual boot Windows (sad landomix)
 |**Package**|**Where**|
@@ -224,11 +226,22 @@ Mount the partition from which the other system boots, and then run
 ### Hyprland stuff
 |**Package**|**Where**|**Purpose**|
 |-----------|---------|-----------|
-|[wofi](https://archlinux.org/packages/extra/x86_64/wofi/)|pacman|Applications launcher|
-|[waybar](https://archlinux.org/packages/extra/x86_64/waybar/)|pacman|Top screen status bar|
 |[cava](https://aur.archlinux.org/packages/cava)|AUR|Fancy audio visualizer|
+|[grimblast-git](https://aur.archlinux.org/packages/grimblast-git)|AUR|Screenshots|
 |[python-requests](https://archlinux.org/packages/extra/any/python-requests/)|pacman|Needed for weather in waybar|
+|[swaylock-effects](https://aur.archlinux.org/packages/swaylock-effects)|AUR|Lock screen|
+|[swaync](https://aur.archlinux.org/packages/swaync)|AUR|Notification Center|
+|[swappy](https://archlinux.org/packages/extra/x86_64/swappy/)|pacman|Needed for screenshots|
+|[udiskie](https://archlinux.org/packages/extra/any/udiskie/)|pacman|Needed to automount disks connected via usb|
+|[waybar](https://archlinux.org/packages/extra/x86_64/waybar/)|pacman|Top screen status bar|
+|[wl-clipboard](https://archlinux.org/packages/extra/x86_64/wl-clipboard/)|pacman|Clipboard, for screenshots and others|
+|[wofi](https://archlinux.org/packages/extra/x86_64/wofi/)|pacman|Applications launcher|
 
+### Optionals
+|**Package**|**Where**|**Purpose**|
+|[bitwarden](https://archlinux.org/packages/extra/x86_64/bitwarden/)|pacman|Password manager|
+|[pdfarranger](https://archlinux.org/packages/extra/any/pdfarranger/)|pacman|Arrange and merge PDFs|
+|[upscayl-bin](https://aur.archlinux.org/packages/upscayl-bin)|AUR|Image Upscaler|
 
 ### Create link
 Create the dynamic links to this folder files. To do so, in this cloned repo:
@@ -242,22 +255,22 @@ Landotfiles $ ./create-link.sh
 - [ ] wallpaper
 - [ ] Startup things little bit delayed (e.g., nextcloud)
 - [ ] bindings in hypr.conf (source different files)
-- [ ] screenshot
+- [x] screenshot
 - [ ] screen sharing
 - [ ] fix waybar & cava
 - [ ] Authentication agent
-- [ ] swaylock
-- [ ] swaync
+- [x] swaylock
+- [x] swaync
 - [ ] Screen recording
 - [ ] double keyboard layout
-- [ ] Whatsie
-- [ ] pdfarranger
+- [x] Whatsie
+- [x] pdfarranger
 - [ ] obs
 - [ ] onlyoffice (old version that works on hyprland, remember to tell pacman not upgrade it)
 - [ ] discord
 - [ ] spicetify & spotify
 - [ ] wireguard
-- [ ] Bitwarden
+- [x] Bitwarden
 - [ ] Nextcloud
 - [ ] Teams
 - [ ] Fix icons weather
