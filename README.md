@@ -318,7 +318,7 @@ Landotfiles $ ./create-link.sh
 - [ ] Fix themes of applications
 - [ ] Better GRUB
 - [ ] Dashboards, plus control volumes from Gl00ria's dotfiles
-- [ ] Remap GMMK Pro rotatory encoder
+- [ ] Remap GMMK Pro rotatory encoder (see if with maiusc + encoder you can change brightness instead of volume)
 - [ ] volume on screen popup
 - [ ] pyprland
 - [ ] fix time
