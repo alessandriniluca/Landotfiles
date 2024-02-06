@@ -178,6 +178,39 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 # now load zsh-syntax-highlighting plugin
 ```
 
+
+**Login theme**
+
+I opted for [this](https://github.com/Keyitdev/sddm-astronaut-theme.git). N.B.: You need the package `sddm` in Hyprland's stuff.
+
+Other dependencies:
+|**Package**|**Where**|
+|-----------|---------|
+|[qt5-graphicaleffects](https://archlinux.org/packages/extra/x86_64/qt5-graphicaleffects/)|pacman|
+|[qt5-quickcontrols2](https://archlinux.org/packages/extra/x86_64/qt5-quickcontrols2/)|pacman|
+|[qt5-svg](https://archlinux.org/packages/extra/x86_64/qt5-svg/)|pacman|
+
+TL;DR:
+
+Clone the repository into `/usr/share/sddm/themes`:
+```
+$ sudo git clone https://github.com/Keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
+```
+Copy fonts to `/usr/share/fonts`:
+```
+$ sudo cp /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
+```
+Then edit `/etc/sddm.conf`:
+```
+$ echo "[Theme]
+Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
+```
+IMPORTANT: in `sudo vim /usr/share/sddm/themes/sddm-astronaut-theme/Components/Input.qml` search for `Font.Capitalize : Font.MixedCase` and remove that line, otherwise the first letter in the username will be uppercase ([source](https://github.com/MarianArlt/sddm-sugar-dark/issues/14))
+
+```
+$ sudo systemctl enable sddm.service
+```
+
 ### Utilities
 |**Package**|**Where**|**Description**|
 |-----------|---------|----------|
@@ -185,6 +218,7 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 |[btop](https://archlinux.org/packages/extra/x86_64/btop/)|pacman|Usage of CPU|
 |[firefox](https://archlinux.org/packages/?name=firefox)|pacman|Browser|
 |[gedit](https://archlinux.org/packages/?name=gedit)|pacman|Text editor|
+|[imv](https://archlinux.org/packages/?name=imv)|pacman|Image viewer|
 |[telegram-desktop](https://archlinux.org/packages/?name=telegram-desktop)|pacman|Messaging|
 |[nemo](https://archlinux.org/packages/?name=nemo)|pacman|File explorer|
 |[nemo-fileroller](https://archlinux.org/packages/extra/x86_64/nemo-fileroller/)|pacman|Utility to compress and uncompress files with right click|
@@ -229,6 +263,7 @@ Mount the partition from which the other system boots, and then run
 |[cava](https://aur.archlinux.org/packages/cava)|AUR|Fancy audio visualizer|
 |[grimblast-git](https://aur.archlinux.org/packages/grimblast-git)|AUR|Screenshots|
 |[python-requests](https://archlinux.org/packages/extra/any/python-requests/)|pacman|Needed for weather in waybar|
+|[sddm](https://archlinux.org/packages/extra/x86_64/sddm/)|pacman|Manager for login|
 |[swaylock-effects](https://aur.archlinux.org/packages/swaylock-effects)|AUR|Lock screen|
 |[swaync](https://aur.archlinux.org/packages/swaync)|AUR|Notification Center|
 |[swappy](https://archlinux.org/packages/extra/x86_64/swappy/)|pacman|Needed for screenshots|
@@ -242,8 +277,10 @@ Mount the partition from which the other system boots, and then run
 |-----------|---------|-----------|
 |[bitwarden](https://archlinux.org/packages/extra/x86_64/bitwarden/)|pacman|Password manager|
 |[discord](https://archlinux.org/packages/?name=discord)|pacman|Discord|
+|[miniconda3](https://aur.archlinux.org/packages/miniconda3)|AUR|Conda provider|
 |[obs-studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)|pacman|OBS|
 |[pdfarranger](https://archlinux.org/packages/extra/any/pdfarranger/)|pacman|Arrange and merge PDFs|
+|[python-poetry](https://archlinux.org/packages/extra/any/python-poetry/)|pacman|Python management|
 |[teams-for-linux](https://aur.archlinux.org/packages/teams-for-linux)|AUR|Microsoft Teams|
 |[upscayl-bin](https://aur.archlinux.org/packages/upscayl-bin)|AUR|Image Upscaler|
 
@@ -285,7 +322,8 @@ Landotfiles $ ./create-link.sh
 - [ ] volume on screen popup
 - [ ] pyprland
 - [ ] fix time
-- [ ] add login interface
+- [x] add login interface
+- [ ] Timeshift (need to fix partition on the other SSD).
 -----------------------
 - [ ] make installation script
 - [ ] do the same for the laptop
@@ -294,3 +332,4 @@ Landotfiles $ ./create-link.sh
 - https://github.com/Gl00ria/dotfiles
 - https://github.com/juriSacchetta/.dotfiles
 - https://github.com/Fili-ai/Dotfiles
+- https://github.com/Keyitdev/sddm-astronaut-theme
