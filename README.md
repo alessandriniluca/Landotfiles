@@ -321,7 +321,7 @@ Landotfiles $ ./create-link.sh
 - [ ] Remap GMMK Pro rotatory encoder (see if with maiusc + encoder you can change brightness instead of volume)
 - [ ] volume on screen popup
 - [ ] pyprland
-- [ ] fix time
+- [x] fix time
 - [x] add login interface
 - [ ] Timeshift (need to fix partition on the other SSD).
 -----------------------
