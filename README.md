@@ -279,8 +279,12 @@ Mount the partition from which the other system boots, and then run
 |[discord](https://archlinux.org/packages/?name=discord)|pacman|Discord|
 |[miniconda3](https://aur.archlinux.org/packages/miniconda3)|AUR|Conda provider|
 |[obs-studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)|pacman|OBS|
+|[onlyoffice-bin](https://aur.archlinux.org/packages/onlyoffice-bin)|AUR|Office Suite|
+|[openconnect](https://archlinux.org/packages/extra/x86_64/openconnect/)|pacman|Needed to connect to university's vpn|
 |[pdfarranger](https://archlinux.org/packages/extra/any/pdfarranger/)|pacman|Arrange and merge PDFs|
 |[python-poetry](https://archlinux.org/packages/extra/any/python-poetry/)|pacman|Python management|
+|[spotify](https://aur.archlinux.org/packages/spotify)|AUR|Spotify|
+|[spicetify-cli](https://aur.archlinux.org/packages/spicetify-cli)|AUR|CLI utility to customize spotify theme|
 |[teams-for-linux](https://aur.archlinux.org/packages/teams-for-linux)|AUR|Microsoft Teams|
 |[upscayl-bin](https://aur.archlinux.org/packages/upscayl-bin)|AUR|Image Upscaler|
 
@@ -307,9 +311,9 @@ Landotfiles $ ./create-link.sh
 - [x] Whatsie
 - [x] pdfarranger
 - [x] obs
-- [ ] onlyoffice (old version that works on hyprland, remember to tell pacman not upgrade it)
+- [x] onlyoffice (has been fixed for hyprland)
 - [x] discord
-- [ ] spicetify & spotify
+- [ ] spicetify & spotify (packages installed, need to set up the theme [here](https://github.com/catppuccin/spicetify))
 - [ ] wireguard
 - [x] Bitwarden
 - [ ] Nextcloud
