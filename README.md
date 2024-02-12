@@ -210,6 +210,33 @@ IMPORTANT: in `sudo vim /usr/share/sddm/themes/sddm-astronaut-theme/Components/I
 ```
 $ sudo systemctl enable sddm.service
 ```
+**Spicetify**
+
+Follow instructions [here](https://github.com/catppuccin/spicetify). TL;DR:
+
+Assuming your user is in group `wheel`:
+```
+$ sudo chgrp wheel /opt/spotify
+$ sudo chgrp -R wheel /opt/spotify/Apps
+$ sudo chmod 775 /opt/spotify
+$ sudo chmod 775 -R /opt/spotify/Apps
+```
+Then:
+```
+$ cd $HOME/github-repos/
+~/github-repos$ git clone https://github.com/catppuccin/spicetify.git
+~/github-repos$ ln -s $HOME/github-repos/spicetify/catppuccin $HOME/.config/spicetify/Themes/catppuccin
+```
+Open sptotify the first time to generate configs, then:
+```
+$ spicetify config current_theme catppuccin
+$ spicetify config color_scheme mocha
+$ spicetify backup apply
+```
+
+**Wireguard**
+
+After having installed the package linked in optionals section, put your files in `etc/wireguard/filename.conf`. `sudo wg-quick up filename` and `sudo wg-quick down filename` will allow you to connect / disconnect to the VPN.
 
 ### Utilities
 |**Package**|**Where**|**Description**|
@@ -262,6 +289,7 @@ Mount the partition from which the other system boots, and then run
 |-----------|---------|-----------|
 |[cava](https://aur.archlinux.org/packages/cava)|AUR|Fancy audio visualizer|
 |[grimblast-git](https://aur.archlinux.org/packages/grimblast-git)|AUR|Screenshots|
+|[pyprland](https://aur.archlinux.org/packages/pyprland)|AUR|Easier scratchpads conf|
 |[python-requests](https://archlinux.org/packages/extra/any/python-requests/)|pacman|Needed for weather in waybar|
 |[sddm](https://archlinux.org/packages/extra/x86_64/sddm/)|pacman|Manager for login|
 |[swaylock-effects](https://aur.archlinux.org/packages/swaylock-effects)|AUR|Lock screen|
@@ -277,6 +305,7 @@ Mount the partition from which the other system boots, and then run
 |-----------|---------|-----------|
 |[bitwarden](https://archlinux.org/packages/extra/x86_64/bitwarden/)|pacman|Password manager|
 |[discord](https://archlinux.org/packages/?name=discord)|pacman|Discord|
+|[inetutils](https://archlinux.org/packages/core/x86_64/inetutils/)|pacman|Provides the command `hostname`, useful when writing the comment while generating the ssh key|
 |[miniconda3](https://aur.archlinux.org/packages/miniconda3)|AUR|Conda provider|
 |[obs-studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)|pacman|OBS|
 |[onlyoffice-bin](https://aur.archlinux.org/packages/onlyoffice-bin)|AUR|Office Suite|
@@ -287,6 +316,7 @@ Mount the partition from which the other system boots, and then run
 |[spicetify-cli](https://aur.archlinux.org/packages/spicetify-cli)|AUR|CLI utility to customize spotify theme|
 |[teams-for-linux](https://aur.archlinux.org/packages/teams-for-linux)|AUR|Microsoft Teams|
 |[upscayl-bin](https://aur.archlinux.org/packages/upscayl-bin)|AUR|Image Upscaler|
+|[wireguard-tools](https://archlinux.org/packages/extra/x86_64/wireguard-tools/)|pacman|Wireguard tools to conenct to wireguard VPNs|
 
 ### Create link
 Create the dynamic links to this folder files. To do so, in this cloned repo:
@@ -313,8 +343,8 @@ Landotfiles $ ./create-link.sh
 - [x] obs
 - [x] onlyoffice (has been fixed for hyprland)
 - [x] discord
-- [ ] spicetify & spotify (packages installed, need to set up the theme [here](https://github.com/catppuccin/spicetify))
-- [ ] wireguard
+- [x] spicetify & spotify
+- [x] Wireguard
 - [x] Bitwarden
 - [ ] Nextcloud
 - [x] Teams
@@ -322,9 +352,11 @@ Landotfiles $ ./create-link.sh
 - [ ] Fix themes of applications
 - [ ] Better GRUB
 - [ ] Dashboards, plus control volumes from Gl00ria's dotfiles
-- [ ] Remap GMMK Pro rotatory encoder (see if with maiusc + encoder you can change brightness instead of volume)
+- [ ] Remap GMMK Pro rotatory encoder (see if with maiusc + encoder you can change brightness instead of volume). Up has keycode 123, down has keycode 122, mute 121
 - [ ] volume on screen popup
-- [ ] pyprland
+- [x] pyprland
+- [ ] Clean pyprland.json and complete configs
+- [ ] change pyprland dropdown term with alacritty
 - [x] fix time
 - [x] add login interface
 - [ ] Timeshift (need to fix partition on the other SSD).
