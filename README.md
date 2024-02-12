@@ -238,6 +238,14 @@ $ spicetify backup apply
 
 After having installed the package linked in optionals section, put your files in `etc/wireguard/filename.conf`. `sudo wg-quick up filename` and `sudo wg-quick down filename` will allow you to connect / disconnect to the VPN.
 
+**Grub Setup**
+
+[Source](https://github.com/vinceliuice/grub2-themes)
+```
+$ cd $HOME/github-repos && git clone https://github.com/vinceliuice/grub2-themes
+github-repos$ cd grub2-themes && sudo ./install.sh -t vimix -s 2k -i color
+```
+
 ### Utilities
 |**Package**|**Where**|**Description**|
 |-----------|---------|----------|
@@ -350,9 +358,10 @@ Landotfiles $ ./create-link.sh
 - [x] Teams
 - [ ] Fix icons weather
 - [ ] Fix themes of applications
-- [ ] Better GRUB
+- [x] Better GRUB
 - [ ] Dashboards, plus control volumes from Gl00ria's dotfiles
-- [ ] Remap GMMK Pro rotatory encoder (see if with maiusc + encoder you can change brightness instead of volume). Up has keycode 123, down has keycode 122, mute 121
+- [x] Remap GMMK Pro rotatory encoder (see if with maiusc + encoder you can change brightness instead of volume).
+- [ ] check if you can change brightness and microphone volume with rotatory encoder of the keyboardgrub 
 - [ ] volume on screen popup
 - [x] pyprland
 - [ ] Clean pyprland.json and complete configs
