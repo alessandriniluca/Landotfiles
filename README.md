@@ -2,6 +2,9 @@
 ## Description
 This folder contains the dotfiles of Landomix' PCs
 ## Installation
+### Important notice
+I use a hidden file in the home directory to store all environment variables I need for programming. By using this, it will be created through the `create-link` script as an empty file in `$HOME/.devenvs`, and sourced in
+`$HOME/.zshrc`. Feel free to remove it if you find it useless, but remember to remove also the line that sources it in the zshrc file.
 ### Arch' setup phase
 |**Package**|**Where**|
 |-----------|---------|

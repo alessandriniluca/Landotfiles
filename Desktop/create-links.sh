@@ -6,3 +6,5 @@ ln -s $HOME/github-repos/Landotfiles/Desktop/waybar $HOME/.config/waybar
 ln -s $HOME/github-repos/Landotfiles/Desktop/hypr $HOME/.config/hypr
 ln -s $HOME/github-repos/Landotfiles/Desktop/swaync $HOME/.config/swaync
 ln -s $HOME/github-repos/Landotfiles/Desktop/swaylock $HOME/.config/swaylock
+ln -s $HOME/github-repos/Landotfiles/Desktop/kitty $HOME/.config/kitty
+ln -s $HOME/github-repos/Landotfiles/Desktop/misc/.devenvs $HOME
