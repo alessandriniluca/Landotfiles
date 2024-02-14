@@ -297,6 +297,8 @@ Mount the partition from which the other system boots, and then run
 |-----------|---------|-----------|
 |[cava](https://aur.archlinux.org/packages/cava)|AUR|Fancy audio visualizer|
 |[grimblast-git](https://aur.archlinux.org/packages/grimblast-git)|AUR|Screenshots|
+|[polkit](https://archlinux.org/packages/extra/x86_64/polkit/)|pacman|Application development toolkit for controlling system-wide privileges|
+|[polkit-kde-agent](https://archlinux.org/packages/extra/x86_64/polkit-kde-agent/)|pacman|Authentication Agent|
 |[pyprland](https://aur.archlinux.org/packages/pyprland)|AUR|Easier scratchpads conf|
 |[python-requests](https://archlinux.org/packages/extra/any/python-requests/)|pacman|Needed for weather in waybar|
 |[sddm](https://archlinux.org/packages/extra/x86_64/sddm/)|pacman|Manager for login|
@@ -313,7 +315,9 @@ Mount the partition from which the other system boots, and then run
 |-----------|---------|-----------|
 |[bitwarden](https://archlinux.org/packages/extra/x86_64/bitwarden/)|pacman|Password manager|
 |[discord](https://archlinux.org/packages/?name=discord)|pacman|Discord|
+|[filelight](https://archlinux.org/packages/extra/x86_64/filelight/)|pacman|Disk usage viewer|
 |[inetutils](https://archlinux.org/packages/core/x86_64/inetutils/)|pacman|Provides the command `hostname`, useful when writing the comment while generating the ssh key|
+|[partitionmanager](https://archlinux.org/packages/extra/x86_64/partitionmanager/)|pacman|A KDE utility that allows you to manage disks, partitions, and file systems|
 |[miniconda3](https://aur.archlinux.org/packages/miniconda3)|AUR|Conda provider|
 |[obs-studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)|pacman|OBS|
 |[onlyoffice-bin](https://aur.archlinux.org/packages/onlyoffice-bin)|AUR|Office Suite|
@@ -341,7 +345,7 @@ Landotfiles $ ./create-link.sh
 - [x] screenshot
 - [ ] screen sharing
 - [ ] fix waybar & cava
-- [ ] Authentication agent
+- [ ] Authentication agent W.I.P. : still need to solve vscode's keyring issue with the wallet. According to the documentation of VScode it doesn't detect the Desktop Environment, need to investigate
 - [x] swaylock
 - [x] swaync
 - [ ] Screen recording
