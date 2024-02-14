@@ -264,7 +264,7 @@ github-repos$ cd grub2-themes && sudo ./install.sh -t vimix -s 2k -i color
 |[nvtop](https://archlinux.org/packages/extra/x86_64/nvtop/)|pacman|Usage and processes GPU|
 |[topgrade](https://aur.archlinux.org/packages/topgrade)|AUR|Update and upgrade everything with one command|
 |[visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin)|AUR|Code IDE|
-|[whatsie](https://aur.archlinux.org/packages/whatsie)|AUR|Whatsapp client|
+|[whatsdesk-bin](https://aur.archlinux.org/packages/whatsdesk-bin)|AUR|Whatsapp client|
 
 ### Dual boot Windows (sad landomix)
 |**Package**|**Where**|
