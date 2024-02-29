@@ -258,6 +258,7 @@ github-repos$ cd grub2-themes && sudo ./install.sh -t vimix -s 2k -i color
 |[gedit](https://archlinux.org/packages/?name=gedit)|pacman|Text editor|
 |[imv](https://archlinux.org/packages/?name=imv)|pacman|Image viewer|
 |[telegram-desktop](https://archlinux.org/packages/?name=telegram-desktop)|pacman|Messaging|
+|[mpv](https://archlinux.org/packages/extra/x86_64/mpv/)|pacman|Video Player|
 |[nemo](https://archlinux.org/packages/?name=nemo)|pacman|File explorer|
 |[nemo-fileroller](https://archlinux.org/packages/extra/x86_64/nemo-fileroller/)|pacman|Utility to compress and uncompress files with right click|
 |[neofetch](https://archlinux.org/packages/extra/any/neofetch/)|pacman|Display purposes|
