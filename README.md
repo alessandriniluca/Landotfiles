@@ -317,9 +317,13 @@ Mount the partition from which the other system boots, and then run
 |**Package**|**Where**|**Purpose**|
 |-----------|---------|-----------|
 |[bitwarden](https://archlinux.org/packages/extra/x86_64/bitwarden/)|pacman|Password manager|
+|[cliphist](https://archlinux.org/packages/extra/x86_64/cliphist/)|pacman|Keep in memory clipboard history and show in rofi|
+|[cuda](https://archlinux.org/packages/extra/x86_64/cuda/)|pacman|ML models on GPU|
 |[discord](https://archlinux.org/packages/?name=discord)|pacman|Discord|
 |[filelight](https://archlinux.org/packages/extra/x86_64/filelight/)|pacman|Disk usage viewer|
+|[gnome-keyring](https://archlinux.org/packages/extra/x86_64/gnome-keyring/)|pacman|Needed to have copilot in vscode|
 |[inetutils](https://archlinux.org/packages/core/x86_64/inetutils/)|pacman|Provides the command `hostname`, useful when writing the comment while generating the ssh key|
+|[libsecret](https://archlinux.org/packages/core/x86_64/libsecret/)|pacman|Needed to have copilot in vscode|
 |[partitionmanager](https://archlinux.org/packages/extra/x86_64/partitionmanager/)|pacman|A KDE utility that allows you to manage disks, partitions, and file systems|
 |[miniconda3](https://aur.archlinux.org/packages/miniconda3)|AUR|Conda provider|
 |[obs-studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)|pacman|OBS|
@@ -331,7 +335,12 @@ Mount the partition from which the other system boots, and then run
 |[spicetify-cli](https://aur.archlinux.org/packages/spicetify-cli)|AUR|CLI utility to customize spotify theme|
 |[teams-for-linux](https://aur.archlinux.org/packages/teams-for-linux)|AUR|Microsoft Teams|
 |[upscayl-bin](https://aur.archlinux.org/packages/upscayl-bin)|AUR|Image Upscaler|
+|[wget](https://archlinux.org/packages/?name=wget)|pacman|Download stuff|
 |[wireguard-tools](https://archlinux.org/packages/extra/x86_64/wireguard-tools/)|pacman|Wireguard tools to conenct to wireguard VPNs|
+
+**VSCode Copilot**
+Once installed the dependencies needed, open vscode, `ctrl+shift+p`, type `Configure Runtime Arguments`, add `"password-store":"gnome-libsecret"` to the list and exit VSCode. Re-open it by typing in terminal `code --password-store="gnome-libsecret"`, and login with copilot. Notice that when it will ask for a password is the password for the keyring, set it. If set equal to the login, it should be decrypted when logged in, it's up to you
+what to choose.
 
 ### Create link
 Create the dynamic links to this folder files. To do so, in this cloned repo:
@@ -348,7 +357,7 @@ Landotfiles $ ./create-link.sh
 - [x] screenshot
 - [ ] screen sharing
 - [ ] fix waybar & cava
-- [ ] Authentication agent W.I.P. : still need to solve vscode's keyring issue with the wallet. According to the documentation of VScode it doesn't detect the Desktop Environment, need to investigate
+- [x] Authentication agent
 - [x] swaylock
 - [x] swaync
 - [ ] Screen recording
