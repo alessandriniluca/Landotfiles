@@ -1,0 +1,20 @@
+sleep 1
+
+# starting screensharing
+/usr/lib/xdg-desktop-portal-hyprland &
+sleep 2
+/usr/lib/xdg-desktop-portal &
+
+sleep 1
+
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP & # for XDPH
+dbus-update-activation-environment --systemd --all &                               # for XDPH
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &          # for XDPH
+
+# delayed start to avoid issues
+sleep 5
+
+nextcloud &
+# birdtray &
+discord --start-minimized &
+telegram-desktop -startintray

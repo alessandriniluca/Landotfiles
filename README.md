@@ -257,12 +257,13 @@ github-repos$ cd grub2-themes && sudo ./install.sh -t vimix -s 2k -i color
 |[firefox](https://archlinux.org/packages/?name=firefox)|pacman|Browser|
 |[gedit](https://archlinux.org/packages/?name=gedit)|pacman|Text editor|
 |[imv](https://archlinux.org/packages/?name=imv)|pacman|Image viewer|
-|[telegram-desktop](https://archlinux.org/packages/?name=telegram-desktop)|pacman|Messaging|
 |[mpv](https://archlinux.org/packages/extra/x86_64/mpv/)|pacman|Video Player|
 |[nemo](https://archlinux.org/packages/?name=nemo)|pacman|File explorer|
 |[nemo-fileroller](https://archlinux.org/packages/extra/x86_64/nemo-fileroller/)|pacman|Utility to compress and uncompress files with right click|
 |[neofetch](https://archlinux.org/packages/extra/any/neofetch/)|pacman|Display purposes|
 |[nvtop](https://archlinux.org/packages/extra/x86_64/nvtop/)|pacman|Usage and processes GPU|
+|[telegram-desktop](https://archlinux.org/packages/?name=telegram-desktop)|pacman|Messaging|
+|[timeshift](https://archlinux.org/packages/extra/x86_64/timeshift/)|pacman|System restore utility|
 |[topgrade](https://aur.archlinux.org/packages/topgrade)|AUR|Update and upgrade everything with one command|
 |[visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin)|AUR|Code IDE|
 |[whatsdesk-bin](https://aur.archlinux.org/packages/whatsdesk-bin)|AUR|Whatsapp client|
@@ -313,6 +314,13 @@ Mount the partition from which the other system boots, and then run
 |[waybar](https://archlinux.org/packages/extra/x86_64/waybar/)|pacman|Top screen status bar|
 |[wl-clipboard](https://archlinux.org/packages/extra/x86_64/wl-clipboard/)|pacman|Clipboard, for screenshots and others|
 |[wofi](https://archlinux.org/packages/extra/x86_64/wofi/)|pacman|Applications launcher|
+|[xdg-desktop-portal](https://archlinux.org/packages/extra/x86_64/xdg-desktop-portal/)|pacman|Screen sharing stuff|
+|[xdg-desktop-portal-hyprland](https://archlinux.org/packages/extra/x86_64/xdg-desktop-portal-hyprland/)|pacman|Screen sharing stuff|
+
+In order to  have automatic startup of apps at boot, run
+```
+chmod +x $HOME/github-repos/Landotfiles/Desktop/hypr/autostart
+```
 
 ### Optionals
 |**Package**|**Where**|**Purpose**|
@@ -325,16 +333,22 @@ Mount the partition from which the other system boots, and then run
 |[gnome-keyring](https://archlinux.org/packages/extra/x86_64/gnome-keyring/)|pacman|Needed to have copilot in vscode|
 |[inetutils](https://archlinux.org/packages/core/x86_64/inetutils/)|pacman|Provides the command `hostname`, useful when writing the comment while generating the ssh key|
 |[libsecret](https://archlinux.org/packages/core/x86_64/libsecret/)|pacman|Needed to have copilot in vscode|
+|[logseq-desktop-bin](https://aur.archlinux.org/packages/logseq-desktop-bin)|AUR|Desktop client for Logseq|
 |[partitionmanager](https://archlinux.org/packages/extra/x86_64/partitionmanager/)|pacman|A KDE utility that allows you to manage disks, partitions, and file systems|
 |[miniconda3](https://aur.archlinux.org/packages/miniconda3)|AUR|Conda provider|
+|[neovim](https://archlinux.org/packages/extra/x86_64/neovim/)|pacman|Writing code. For now using [lunarvim](https://www.lunarvim.org/docs/installation)|
+|[nextcloud-client](https://archlinux.org/packages/?name=nextcloud-client)|pacman|Nextcloud Client|
 |[obs-studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)|pacman|OBS|
 |[onlyoffice-bin](https://aur.archlinux.org/packages/onlyoffice-bin)|AUR|Office Suite|
 |[openconnect](https://archlinux.org/packages/extra/x86_64/openconnect/)|pacman|Needed to connect to university's vpn|
 |[pdfarranger](https://archlinux.org/packages/extra/any/pdfarranger/)|pacman|Arrange and merge PDFs|
 |[python-poetry](https://archlinux.org/packages/extra/any/python-poetry/)|pacman|Python management|
+|[python-sphinx](https://archlinux.org/packages/extra/any/python-sphinx/)|pacman|Write documentations|
+|[python-sphinx_rtd_theme](https://archlinux.org/packages/extra/any/python-sphinx_rtd_theme/)|pacman|Theme for sphinx documentation|
 |[spotify](https://aur.archlinux.org/packages/spotify)|AUR|Spotify|
 |[spicetify-cli](https://aur.archlinux.org/packages/spicetify-cli)|AUR|CLI utility to customize spotify theme|
 |[teams-for-linux](https://aur.archlinux.org/packages/teams-for-linux)|AUR|Microsoft Teams|
+|[tree](https://archlinux.org/packages/extra/x86_64/tree/)|pacman|Directory list visualizer|
 |[upscayl-bin](https://aur.archlinux.org/packages/upscayl-bin)|AUR|Image Upscaler|
 |[wget](https://archlinux.org/packages/?name=wget)|pacman|Download stuff|
 |[wireguard-tools](https://archlinux.org/packages/extra/x86_64/wireguard-tools/)|pacman|Wireguard tools to conenct to wireguard VPNs|
@@ -353,10 +367,10 @@ Landotfiles $ ./create-link.sh
 ## What's Next?
 - [ ] Complete waybar subpackages (if you want to check, run waybar from terminal, and while is open see what fails)
 - [ ] wallpaper
-- [ ] Startup things little bit delayed (e.g., nextcloud)
+- [x] Startup things little bit delayed (e.g., nextcloud)
 - [ ] bindings in hypr.conf (source different files)
 - [x] screenshot
-- [ ] screen sharing
+- [x] screen sharing
 - [ ] fix waybar & cava
 - [x] Authentication agent
 - [x] swaylock
@@ -371,7 +385,7 @@ Landotfiles $ ./create-link.sh
 - [x] spicetify & spotify
 - [x] Wireguard
 - [x] Bitwarden
-- [ ] Nextcloud
+- [x] Nextcloud
 - [x] Teams
 - [ ] Fix icons weather
 - [ ] Fix themes of applications
